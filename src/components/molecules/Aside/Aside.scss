@@ -1,0 +1,8 @@
+@import "styles/variables";
+
+.left-aside {
+    border-right: 2px solid $text-color;
+    display: block;
+    width: $left-sidebar-width;
+    background-color: $beige;
+}

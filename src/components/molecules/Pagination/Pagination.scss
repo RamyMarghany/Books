@@ -1,0 +1,32 @@
+@import "styles/variables";
+
+.pagination {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: $space-medium*10 0 $space-medium*5;
+    font-size: 1rem;
+    gap: $space-small;
+    padding: 0;
+}
+
+.page-item {
+    background: $beige;
+    border: 1px solid;
+    padding: $space-small $space-small*2;
+    border-radius: $space-small;
+    color: $black;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $black;
+        color: $beige;
+    }
+
+    &.active {
+        background-color: $black;
+        color: $beige;
+    }
+}

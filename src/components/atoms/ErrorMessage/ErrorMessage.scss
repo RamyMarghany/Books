@@ -1,0 +1,11 @@
+@import "styles/variables";
+
+.error-message {
+    text-align: center;
+    background-color: $black;
+    border: 1px solid $beige;
+    color: $beige;
+    width: 30em;
+    margin: 5em auto;
+    border-radius: $space-medium;
+}

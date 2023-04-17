@@ -1,0 +1,16 @@
+@import "styles/variables";
+
+.favourite-wrapper {
+    max-width: $max-width;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    margin: $space-large auto;
+    flex-direction: row;
+}
+
+.favourite-wrapper__title {
+    text-transform: uppercase;
+    color: $black;
+}

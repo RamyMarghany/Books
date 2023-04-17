@@ -1,0 +1,35 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.navbar {
+    background-color: $black;
+    display: flex;
+    justify-content: space-evenly;
+    top: 0px;
+    overflow-wrap: break-word;
+    height: $main-navbar-height;
+    padding: $space-medium;
+    border-bottom: 2px solid $text-color;
+}
+
+.navbar--fixed-top {
+    @include sticky;
+    z-index: 1;
+}
+
+.navbar__list {
+    list-style-type: none;
+    display: flex;
+    gap: $space-large;
+    align-items: center;
+    padding: 0;
+
+    a {
+        text-decoration: none;
+        color: $background-color;
+
+        &:hover {
+            color: $beige;
+        }
+    }
+}

@@ -1,0 +1,78 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.book {
+    @include vertical-list;
+    text-align: center;
+}
+
+.book__title {
+    margin: $space-small 0;
+    color: $text-color;
+
+}
+
+.book__authors {
+    margin: $space-small 0;
+    color: $black;
+}
+
+.book__date {
+    margin: $space-small 0;
+    color: $background-color;
+}
+
+.book__categories {
+    background-color: $black;
+    border-radius: $space-small;
+    width: fit-content;
+    padding: $space-small;
+    color: $beige;
+    font-size: 0.8rem;
+    font-style: italic;
+    margin: $space-small 0;
+}
+
+.book__rating {
+    @extend .book__categories;
+    margin: $space-small 0 $space-medium;
+}
+
+.book__image {
+    @include responsive-image;
+    border-radius: $space-medium;
+    height: 400px;
+    margin: $space-medium 0;
+    max-width: 300px;
+}
+
+.book__button--add {
+    background: $black;
+    border-radius: $space-small;
+    border: 1px solid $background-color;
+    text-transform: capitalize;
+    font-size: 0.8em;
+    color: $background-color;
+    width: 70%;
+    margin: $space-medium 0;
+    padding: $space-medium 0;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.book__button--remove {
+    @extend .book__button--add;
+    background: $background-color;
+    color: $black;
+    border: 1px solid $black;
+}
+
+// Tablet style
+@media screen and (max-width: $tablet) {
+    .book {
+        align-items: center;
+        text-align: center;
+    }
+}

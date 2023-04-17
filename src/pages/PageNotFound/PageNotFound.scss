@@ -1,0 +1,20 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.wrapper {
+    @include vertical-list;
+}
+
+.wrapper__btn {
+    background-color: $black;
+    text-transform: capitalize;
+    text-decoration: none;
+    padding: $space-medium $space-default;
+    border-radius: 5px;
+    color: $beige;
+    border: 1px solid $beige;
+
+    &:hover {
+        background-color: $text-color;
+    }
+}

@@ -1,0 +1,9 @@
+@import "styles/variables";
+
+.custome-input {
+    border-radius: $space-small;
+    border: 1px solid $text-color;
+    padding: $space-small;
+    width: 20em;
+    text-indent: $space-small;
+}

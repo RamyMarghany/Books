@@ -1,0 +1,72 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.book-wrapper {
+    @include box-shadow;
+    max-width: $max-width;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin: $space-large auto;
+    background-color: $beige;
+    padding: $space-large;
+    gap: $space-default;
+    border-radius: $space-small;
+    border: 1px solid $text-color;
+    color: $text-color;
+
+    * {
+        margin-top: 0;
+    }
+}
+
+.book-wrapper__image {
+    @include responsive-image;
+    max-width: 400px;
+    border-radius: $space-small;
+}
+
+.book_wrapper__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.book-wrapper__title {
+    color: $black;
+}
+
+.book-wrapper__rating {
+    background-color: $black;
+    color: $background-color;
+    padding: $space-small $space-medium;
+    border-radius: $space-small;
+}
+
+.book-wrapper__genres {
+    color: $black;
+    font-style: italic;
+}
+
+.book-wrapper__num-pages {
+    @extend .book-wrapper__rating;
+    width: fit-content;
+    font-style: italic;
+
+    span {
+        font-style: normal;
+    }
+}
+
+// Mobile Style
+@media screen and (max-width: $mobile) {
+    .book-wrapper {
+        flex-direction: column;
+        align-items: center;
+        margin: $space-default;
+    }
+
+    .book_wrapper__heading {
+        flex-direction: column;
+    }
+}

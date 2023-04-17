@@ -1,0 +1,34 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.card {
+    @include box-shadow;
+    background: $beige;
+    border: 1px solid $background-color;
+    border-radius: $space-medium;
+    padding: $space-medium;
+    margin: $space-default $space-medium;
+    width: calc(25% - $space-medium*2);
+    transition: all .5s ease;
+
+    &:hover {
+        transform: scale(0.9);
+        cursor: pointer;
+        background: $background-color;
+        border: 1px solid $beige;
+    }
+}
+
+// Tablet Style
+@media screen and (max-width: $tablet) {
+    .card {
+        width: calc(50% - $space-medium*2);
+    }
+}
+
+// Mobile Style
+@media screen and (max-width: $mobile) {
+    .card {
+        width: calc(100% - $space-medium*2);
+    }
+}
